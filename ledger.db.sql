@@ -1,5 +1,29 @@
 PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS "assets" (
+	"account"	TEXT,
+	"time"	TEXT,
+	"currency"	TEXT,
+	"amount"	TEXT,
+	"to_rmb"	TEXT
+, "tag"	TEXT);
+INSERT INTO assets VALUES('BTC','260301','btc','0.569957',NULL,'coin');
+INSERT INTO assets VALUES('ETH','260301','eth','6.25412',NULL,'coin');
+INSERT INTO assets VALUES('chase bank','260301','usd (1e4)','0.1703.83',NULL,'现金');
+INSERT INTO assets VALUES('commerce bank','260301','usd (1e4)','0.336878',NULL,'现金');
+INSERT INTO assets VALUES('webull','260301','usd (1e4)','3.68482',NULL,'股票');
+INSERT INTO assets VALUES('中信银行-基金','260301','rmb (1e4)','10.040399',NULL,'基金');
+INSERT INTO assets VALUES('中信银行-活期+','260301','rmb (1e4)','0.154443',NULL,'零钱理财');
+INSERT INTO assets VALUES('哥哥投资','260301','rmb (1e4)','-5',NULL,'别人的');
+INSERT INTO assets VALUES('工商银行-基金','260301','rmb (1e4)','19.861872',NULL,'基金');
+INSERT INTO assets VALUES('工商银行-现金','260301','rmb (1e4)','33.508549',NULL,'现金');
+INSERT INTO assets VALUES('工商银行-理财','260301','rmb (1e4)','27.963154',NULL,'基金');
+INSERT INTO assets VALUES('微信-零钱','260301','rmb (1e4)','0.00641',NULL,'现金');
+INSERT INTO assets VALUES('微信-零钱通','260301','rmb (1e4)','3.313522',NULL,'零钱理财');
+INSERT INTO assets VALUES('支付宝-余额宝','260301','rmb (1e4)','19.509691',NULL,'零钱理财');
+INSERT INTO assets VALUES('支付宝-基金','260301','rmb (1e4)','9.995819',NULL,'基金');
+INSERT INTO assets VALUES('支付宝-现金','260301','rmb (1e4)','0',NULL,'现金');
+INSERT INTO assets VALUES('爸爸投资','260301','rmb (1e4)','-18',NULL,'别人的');
 CREATE TABLE IF NOT EXISTS "accounts" (
 	"name"	TEXT NOT NULL UNIQUE,
 	"currency"	TEXT,

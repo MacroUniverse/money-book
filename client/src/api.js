@@ -69,3 +69,16 @@ export function createTarget(payload) {
     body: JSON.stringify(payload),
   });
 }
+
+export function fetchAssets({ refresh = true } = {}) {
+  const params = new URLSearchParams();
+  params.set("refresh", refresh ? "1" : "0");
+  return request(`/assets?${params.toString()}`);
+}
+
+export function createAsset(payload) {
+  return request("/assets", {
+    method: "POST",
+    body: JSON.stringify(payload),
+  });
+}

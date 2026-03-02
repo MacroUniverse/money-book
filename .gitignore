@@ -4,3 +4,4 @@ server/data/*.db
 server/data/*.db-journal
 .env
 .DS_Store
+*.bak
